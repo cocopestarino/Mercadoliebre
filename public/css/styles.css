@@ -1,0 +1,386 @@
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap'); 
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+);
+@import url(https://necolas.github.io/normalize.css/8.0.1/normalize.css);
+
+
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #ebebeb;
+}
+
+header{
+    background-color: #EAC926;
+    text-align: center;
+    padding: 20px;
+}
+
+p{
+    font-size: 12px;
+}
+
+nav{
+    display: none;
+}
+
+ul{
+    box-sizing: border-box;
+    margin: 0;
+    padding-top: 40px;
+}
+
+li {
+    list-style: none;
+    padding: 0 10px 0 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+}
+
+a i{
+    padding-left: 5px;
+}
+
+
+h3{
+    color: #666;
+}
+
+i{
+    color: #1259c3;
+}
+
+
+main{
+    padding: 20px;
+    align-items: center;
+}
+
+main h2{
+    width: 90%;
+}
+
+article {
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+footer{
+    background-color: white;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+
+/* CSS del encabezado del sitio */
+.contenedor-logo{
+    text-align: center;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.barra-busqueda{
+    display: flex;
+    position: relative;
+    width: 40%;
+}
+
+.barra-busqueda input{
+    margin: 0;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    padding: 10px;
+}
+
+.barra-busqueda .fa-search{
+    position: absolute;
+    color: #666;
+    background-color: white;
+    right: 5px;
+    top: 10px;
+}
+
+
+
+.menu-desplegable{
+    text-align: center;
+    vertical-align: center;
+    width: 45px;
+    height: 45px;
+    background-color: #0044AA;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu-desplegable:hover{
+    background-color: #0022AA;
+}
+
+
+
+/* CSS del cuerpo del sitio */
+
+.seccion-productos{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.seccion-ofertas{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.precio-descuento{
+    border-top: solid 1px #ebebeb;
+}
+
+.titulares{
+    color: #666;
+    font-size: 24px;
+}
+
+.precios{
+    font-size: 16px;
+    display: inline-block;
+}
+
+.descuentos{
+    font-size: 16px;
+    color: #39b54a;
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.descripcion{
+    font-size: 16px;
+    color: #666;
+    display: none;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.precio-descuento{
+    padding: 0 20px 0 20px;
+}
+
+.tarjeta-producto{
+    position: relative;
+    width: 300px;
+}
+
+.tarjeta-producto:hover{
+    z-index: 100;
+    box-shadow: 0 0 10px rgb(100, 100, 100);
+}
+
+.tarjeta-producto:hover .descripcion{
+    display: block;
+}
+
+.tarjeta-producto:hover .fa-truck{
+    transition-duration: 1s;
+    transform: rotateZ(-90deg);
+}
+
+
+/* CCS de imagenes */
+
+.img-logo{
+    display: inline-block;
+    width: 50%;
+}
+
+.img-banner{
+    display: block;
+    width: 100%;
+    height: 100px;
+}
+
+.img-producto{
+    width: 100%;
+    padding: 20px;
+}
+
+
+/* CSS del footer */
+footer article{
+    text-align: center;
+    margin-bottom: 0;
+    padding: 10px;
+}
+
+footer article h3 {
+    margin: 0;
+}
+
+footer p {
+    color: #666;
+}
+
+footer i{
+    font-size: 2em;
+    margin: 4px;
+}
+
+/* CSS de Font Awesome */
+.fa-truck{
+    display: block;
+    position: absolute;
+    right: 20px;
+    padding: 4px;
+    margin: -10px;
+    background-color: white;
+    color: #39b54a;  
+    border: solid 1px #39b54a;
+    border-radius: 100%;
+}
+
+.fa-bars{
+    color: white;
+}
+
+.fa-id-card{
+    color: black;
+}
+
+.fa-sign-in-alt{
+    color: black;
+}
+
+.fa-shopping-basket{
+    color: black;
+}
+
+.fa-hand-holding-usd{
+    color: black;
+}
+
+/* CSS Responsive */
+@media(min-width: 361px){
+    /*CSS para Tablet*/
+    main h2{
+        text-align: left;
+    }
+
+    nav{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    ul{
+        display: flex;
+        flex-flow: column;
+    }
+
+    ul li{
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+    }
+
+    .img-logo{
+        width: 150px;
+        padding-right: 10px;
+        margin-top: 0;
+    }
+
+    .menu-desplegable{
+        display: none;
+    }
+
+    .img-banner{
+        height: 150px;
+    }
+
+    .tarjeta-producto .contenedor-info div{
+        display: flex;
+        align-items: baseline;
+    }
+}
+
+@media(min-width: 769px){
+    /* CSS para desktop */
+    header{
+        padding: 15px 10px 15px 10px;
+    }
+
+    nav{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 30px;
+    }
+
+    nav ul li a{
+        font-size: 15px;
+    }
+
+    ul{
+        display: inline-block;
+    }
+
+    ul li{
+        display: inline-block;
+    }
+
+    main section{
+        margin-bottom: 60px;
+    }
+
+    footer{
+        padding: 30px;
+        font-size: 10px;
+    }
+
+    footer section{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    footer p{
+        text-align: center;
+
+    }
+
+    .tarjeta-producto{
+        width: 200px;
+    }
+
+    .precios{
+        font-size: 12px;
+    }
+
+    .descuentos{
+        font-size: 12px;
+    }
+
+    .descripcion{
+        font-size: 12px;
+    }
+
+    .fa-truck{
+        font-size: 12px;
+    }
+}
